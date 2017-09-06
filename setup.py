@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='jenkins-publisher-bitbucket',
-    version='0.0.1',
+    version='0.0.2',
     description='Jenkins Job Builder Bitbucket Notifier',
     url='https://github.com/bobtfish/jenkins-publisher-bitbucket',
     author='Tomas Doran',
