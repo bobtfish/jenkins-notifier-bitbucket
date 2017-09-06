@@ -17,8 +17,8 @@ def bitbucket_publisher(parser, xml_parent, data):
         data = dict()
 
     notifier = XML.SubElement(
-        xml_parent, 'jenkins.plugins.bitbucket.BitbucketBuildStatusNotifier')
-    notifier.set('plugin', 'bitbucket-build-status-notifier@1.3.0')
+        xml_parent, 'org.jenkinsci.plugins.bitbucket.BitbucketBuildStatusNotifier')
+    notifier.set('plugin', 'bitbucket-build-status-notifier@1.3.3')
 
     for (opt, attr) in (('notify-start', 'notifyStart'),
                         ('notify-finish', 'notifyFinish'),
@@ -29,3 +29,5 @@ def bitbucket_publisher(parser, xml_parent, data):
     if data.get('credentials-id'):
         (XML.SubElement(notifier, 'credentialsId')
          .text) = data.get('credentials-id')
+    else:
+        XML.SubElement(notifier, 'credentialsId')
